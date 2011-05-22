@@ -1,0 +1,17 @@
+Touchpad Script
+---------------
+This is a very simple script that allows you to enable or disable your
+notebook or netbook touchpad device. Very helpful if your "disable touchpad"
+button does not work on linux or if you want a desktop/terminal shortcut.
+
+## Install
+Clone the repository and copy touchpad.py script to /usr/bin with execution
+permissions. Try the following:
+
+sudo mv touchpad.py /usr/bin/touchpad # moving script to user path
+sudo chmod +x /usr/bin/touchpad  # giving execution permission
+
+## Usage
+touchpad ON #  turn touchpad ON
+touchpad OFF # turn touchpad OFF
+
