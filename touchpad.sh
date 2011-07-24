@@ -8,16 +8,18 @@ device_id=`xinput list | grep -i touchpad | grep -o 'id=[0-9][0-9]*' | sed s/id=
 
 if [ $# == 1 ]
 then
-    if [ $1 == "ON" ] || [ $1 == "OFF" ]
+    opt=$(echo $1|tr '[:lower:]' '[:upper:]')
+
+    if [ $opt == "ON" ] || [ $opt  == "OFF" ]
     then
-        if [ $1 == "ON" ]
+        if [ $opt == "ON" ]
         then
-            user_opt=1
+            opt_code=1
         else
-            user_opt=0
+            opt_code=0
         fi
 
-        xinput set-prop $device_id "Device Enabled" $user_opt
+        xinput set-prop $device_id "Device Enabled" $opt_code
     else
         echo "WHAT?"
     fi
