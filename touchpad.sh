@@ -1,4 +1,4 @@
-#
+#!/bin/bash
 # 22/07/2011
 # script by Italo Maia
 # http://www.italomaia.com
